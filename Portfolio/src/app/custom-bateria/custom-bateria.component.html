@@ -1,0 +1,210 @@
+<div class="mainContent">
+
+  <div id="imageZone">
+    <app-parte-visual-da-imagem [drumFrontImage]="'../../../assets/Drums Images/' + drumConfiguration.drumColor + '.jpg'"> </app-parte-visual-da-imagem>
+  </div>
+
+  <div id="orderZone">
+
+    <app-drum-order-page (resetAll) = "callToResetAll()"></app-drum-order-page>
+
+  </div>
+
+  <div id="customZone1">
+
+    <mat-progress-bar mode="determinate" value={{progressBarValue}}></mat-progress-bar>
+
+
+
+
+
+
+
+    <mat-tab-group color="primary" backgroundColor="primary" [dynamicHeight]="false">
+      <mat-tab label="Drum Color">
+        <app-drum-color
+
+          (callToChangeColorToBlueToParent)="drumConfiguration.drumColor = '20559'"
+          (callToChangeColorToYellowToParent)="callToChangeColorToYellowToChild()"
+          (callToChangeColorToPinkToParent)="callToChangeColorToPinkToChild()"
+          (callToChangeColorToRedToParent)="callToChangeColorToRedToChild()"
+          (callToChangeColorToGreenToParent)="callToChangeColorToGreenToChild()"
+          (callToChangeColorToGreyToParent)="callToChangeColorToGreyToChild()">
+
+        </app-drum-color>
+
+
+      </mat-tab>
+      <mat-tab label="Drum Material">
+        <app-material
+
+          (callToChangeToWoodToParent)="callToChangeMaterialToWoodToChild()"
+          (callToChangeToSteelToParent)="callToChangeMaterialToSteelToChild()"
+          (callToChangeToBrassToParent)="callToChangeMaterialToBrassToChild()"
+          (callToChangeToAluminiumToParent)="callToChangeMaterialToAluminiumToChild()">
+
+        </app-material>
+      </mat-tab>
+      <mat-tab label="Drum DIsposition">
+        <app-drum-disposition
+
+          (callToChangeToTwoUpOneDownToParent)="callToChangeToTwoUpOneDownToChild()"
+          (callToChangeToDoubleBassToParent)="callToChangeToDoubleBassToChild()"
+          (callToChangeToFusionTOParent)="callToChangeToFusionToChild()"
+          (callToChangeToClassicToParent)="callToChangeToClassicToChild()"
+          (callToChangeToJazzToParent)="callToChangeToJazzToChild()">
+
+        </app-drum-disposition>
+      </mat-tab>
+      <mat-tab label="Drum Stick Type">
+        <app-drum-stick-type
+
+          (callToChangeToStickToParent)="callToChangeToStickTypeToChild()"
+          (callToChangeToBrushesToParent)="callToChangeToBrushesToChild()"
+          (callToChangeToMalletsToParent)="callToChangeToMalletsToChild()"
+          (callToChangeToRodsToParent)="callToChangeToRodsToChild()">
+
+
+        </app-drum-stick-type>
+      </mat-tab>
+      <mat-tab label="Drum Brand">
+        <app-drum-brand
+
+          (callToChangeToLudwigToParent)="callToChangeToLudwigTypeToChild()"
+          (callToChangeToPearlToParent)="callToChangeToPearlToChild()"
+          (callToChangeToYamahaToParent)="callToChangeToYamahaToChild()"
+        >
+        </app-drum-brand>
+
+      </mat-tab>
+
+    </mat-tab-group>
+
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>
+    <mat-grid-tile-header>Image Preview</mat-grid-tile-header>
+    <app-parte-visual-da-imagem [drumFrontImage]="'../../../assets/Drums Images/' + drumConfiguration.drumColor + '.jpg'"> </app-parte-visual-da-imagem>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-grid-tile-header>Order Priview</mat-grid-tile-header>
+    <app-drum-order-page (resetAll) = "callToResetAll()"></app-drum-order-page>
+  </mat-grid-tile>
+
+
+
+
+  <mat-grid-tile colspan="2" id="customZoneGrid">
+
+    <div id="customZone">
+
+    <mat-grid-tile-header>Custom Zone</mat-grid-tile-header>
+    <mat-progress-bar mode="determinate" value={{progressBarValue}}></mat-progress-bar>
+
+
+
+
+
+
+
+    <mat-tab-group [dynamicHeight]="true">
+      <mat-tab label="Drum Color">
+        <app-drum-color
+
+          (callToChangeColorToBlueToParent)="drumConfiguration.drumColor = '20559'"
+          (callToChangeColorToYellowToParent)="callToChangeColorToYellowToChild()"
+          (callToChangeColorToPinkToParent)="callToChangeColorToPinkToChild()"
+          (callToChangeColorToRedToParent)="callToChangeColorToRedToChild()"
+          (callToChangeColorToGreenToParent)="callToChangeColorToGreenToChild()"
+          (callToChangeColorToGreyToParent)="callToChangeColorToGreyToChild()">
+
+        </app-drum-color>
+
+
+      </mat-tab>
+      <mat-tab label="Drum Material">
+        <app-material
+
+          (callToChangeToWoodToParent)="callToChangeMaterialToWoodToChild()"
+          (callToChangeToSteelToParent)="callToChangeMaterialToSteelToChild()"
+          (callToChangeToBrassToParent)="callToChangeMaterialToBrassToChild()"
+          (callToChangeToAluminiumToParent)="callToChangeMaterialToAluminiumToChild()">
+
+        </app-material>
+      </mat-tab>
+      <mat-tab label="Drum DIsposition">
+        <app-drum-disposition
+
+          (callToChangeToTwoUpOneDownToParent)="callToChangeToTwoUpOneDownToChild()"
+          (callToChangeToDoubleBassToParent)="callToChangeToDoubleBassToChild()"
+          (callToChangeToFusionTOParent)="callToChangeToFusionToChild()"
+          (callToChangeToClassicToParent)="callToChangeToClassicToChild()"
+          (callToChangeToJazzToParent)="callToChangeToJazzToChild()">
+
+        </app-drum-disposition>
+      </mat-tab>
+      <mat-tab label="Drum Stick Type">
+        <app-drum-stick-type
+
+          (callToChangeToStickToParent)="callToChangeToStickTypeToChild()"
+          (callToChangeToBrushesToParent)="callToChangeToBrushesToChild()"
+          (callToChangeToMalletsToParent)="callToChangeToMalletsToChild()"
+          (callToChangeToRodsToParent)="callToChangeToRodsToChild()">
+
+
+        </app-drum-stick-type>
+      </mat-tab>
+      <mat-tab label="Drum Brand">
+        <app-drum-brand
+
+          (callToChangeToLudwigToParent)="callToChangeToLudwigTypeToChild()"
+          (callToChangeToPearlToParent)="callToChangeToPearlToChild()"
+          (callToChangeToYamahaToParent)="callToChangeToYamahaToChild()"
+        >
+        </app-drum-brand>
+
+      </mat-tab>
+
+    </mat-tab-group>
+
+    </div>
+  </mat-grid-tile>
+
+</mat-grid-list>
+
+-->
+
+
+
+
+
+
+
+
+
+

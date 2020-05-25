@@ -1,0 +1,33 @@
+<div id="orderPreview">
+
+
+
+<h1 >Order Preview</h1>
+<div id="orderPreviewText">
+<p>COLOR :{{drumColorSelected}} </p>
+
+<p>MATERIAL : {{drumMaterialSeleted}} </p>
+
+<p>DISPOSITION: {{drumDispositionSeleted}} </p>
+
+<p>STICK TYPE : {{drumStickTypeSelected}} </p>
+
+<p>BRAND: {{drumBrandSelected}} </p>
+
+
+</div>
+
+
+<div id="OrderIcon">
+<mat-icon matBadge={{numberOfOrders}} matBadgePosition="above after" matBadgeSize="medium">
+<input type="image" (click)=" showCart()" src="../../../assets/Icons/Shopping Cart Icon.png" height="100" width="100"/>
+</mat-icon>
+
+</div>
+
+<div id="AddToCart">
+  <button mat-flat-button color="accent" *ngIf="progressBarValueInDrumOrder===100" (click)=" addToCart()">Add To Cart </button>
+</div>
+
+
+</div>

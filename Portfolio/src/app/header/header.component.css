@@ -1,0 +1,63 @@
+#header{
+  width: 100%;
+  float: left;
+  color: white;
+}
+
+ul{
+  float: left;
+}
+#HomePage{
+  float: left;
+  padding: 0px 20px;
+}
+
+#logoPrincipal{
+  width: 60px;
+  padding: 0px 20px;
+}
+
+#opçoesCabeçalho {
+  list-style-type: none;
+  float: left;
+}
+
+#scrollProjectos:hover{
+  background-color: white;
+  color: black;
+  position: relative;
+}
+#scrollProjectos:hover ul{
+  display: block;
+}
+
+#listaDeProjectos {
+  display: none;
+  padding: 24px 14px;
+  position: absolute;
+}
+
+#teste{
+  float: left;
+}
+
+nav{
+  background-color: dimgrey;
+  width: 100%;
+  float: left;
+  color: white;
+}
+
+nav p{
+  float: left;
+}
+
+nav ul{
+  float: left;
+  padding: 0px 20px;
+}
+
+nav ul li {
+  padding: 0px 20px;
+  float: left;
+}

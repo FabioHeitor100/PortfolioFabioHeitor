@@ -1,0 +1,29 @@
+
+
+table, th,td{
+  border: 3px solid black;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th{
+  background-color: #b3b3b3;
+}
+
+th, td {
+  padding: 15px;
+}
+
+h1{
+  background-color: black;
+}
+
+@media screen and (max-width: 600px) {
+  #CartZone {
+    width: 100%;
+  }
+
+}
+
+
+

@@ -1,0 +1,84 @@
+
+<div id="CartZone">
+  <h1>Cart Preview</h1>
+
+<table style="width:100%">
+  <tr>
+    <th>Color</th>
+    <th>Material</th>
+    <th>Disposition</th>
+    <th>Stick Type</th>
+    <th>BRand</th>
+  </tr>
+  <tr>
+    <td>{{dataSource[0].drumColorOrder}}</td>
+    <td>{{dataSource[0].drumMaterialOrder}}</td>
+    <td>{{dataSource[0].drumDispositionOrder}}</td>
+    <td>{{dataSource[0].drumStickTypeOrder}}</td>
+    <td>{{dataSource[0].drumBrandOrder}}</td>
+  </tr>
+
+</table>
+
+
+</div>
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+  <ng-container matColumnDef="Color">
+    <th mat-header-cell *matHeaderCellDef> Color </th>
+    <td mat-cell *matCellDef=1> {{dataSource[0].drumColorOrder}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Material">
+    <th mat-header-cell *matHeaderCellDef> Material </th>
+    <td mat-cell *matCellDef="let data"> {{dataSource[0].drumMaterialOrder}} </td>
+  </ng-container>
+
+  <!--
+
+  <ng-container matColumnDef="Color">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let data"> ola {{data.drumColorSelected}} {{data.data[0].drumColorSelected}} {{data[0].drumColorSelected}}</td>
+  </ng-container>
+
+
+
+
+
+
+
+    <ng-container matColumnDef="inspectionID"> <th mat-header-cell \*matHeaderCellDef mat-sort-header > No. </th> <td mat-cell \*matCellDef="let element">{{element. drumColorOrder }}</td> </ng-container>
+
+    <ng-container matColumnDef="Material">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let data"> {{data.data[0]}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="Disposition">
+      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <td mat-cell *matCellDef="let data"> {{data.data[0]}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="Stick Type">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let data"> {{data.data[0]}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Brand">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let data"> {{data.data[0]}} </td>
+    </ng-container>
+
+    -->
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+

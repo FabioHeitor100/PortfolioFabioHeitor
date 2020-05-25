@@ -1,0 +1,36 @@
+<body>
+<mat-sidenav-container >
+  <mat-sidenav [(opened)]="opened" >
+
+    <img id = "sideBarLogo" src="../../../../assets/Icons/logo.png" height="60" width="60"/>
+
+    <button (click)=changeTittleFrontPage() [routerLink]="['/frontPage']">Home Page</button>
+    <h1 id="sideBarText">Projects:</h1>
+    <button (click)=changeTittleCustomDrum() [routerLink]="['/customBateria']">Drum Customization</button>
+    <button [routerLink]="['/login']">Login</button>
+  </mat-sidenav>
+
+
+  <mat-sidenav-content >
+    <div class="mat-toolbar">
+    <mat-toolbar color="primary">
+
+      <input type="image" src="../../../../assets/Icons/Menu.png" (click)=openSideNAv()>
+      <h1 id="pageTittle">{{pageTittle}}</h1>
+
+
+      <img id="toolBarLogo" src="../../../../assets/Icons/logo.png" height="50" width="50"/>
+    </mat-toolbar>
+    </div>
+    <div class="mainContent">
+    <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+
+
+
+</mat-sidenav-container>
+</body>
+
+
+

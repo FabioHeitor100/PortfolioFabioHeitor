@@ -1,0 +1,95 @@
+mat-sidenav-container{
+  height: 100%;
+}
+
+mat-sidenav{
+  padding: 16px;
+
+}
+
+mat-sidenav{
+  background-color: black;
+  color: white;
+  width: 200px;
+}
+.mat-toolbar{
+  position: fixed;
+
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index:20;
+}
+.mainContent{
+  padding: 30px;
+  margin-top: 64px;
+  z-index:5;
+
+}
+
+
+mat-toolbar {
+
+  background-color: dimgrey;
+  color: white;
+
+}
+
+input {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: -4px;
+}
+
+button {
+ background-color: dimgrey;
+  color: white;
+  width: 160px;
+  height: 40px;
+  border-style: hidden;
+  margin-top: 10px;
+}
+
+#sideBarLogo{
+  width: 160px;
+  height: 160px;
+
+}
+
+#sideBarText {
+  font-family: "Times New Roman";
+  font-size: 20px;
+
+}
+
+#toolBarLogo{
+ position: absolute;
+ right: 16px;
+
+
+
+}
+
+#pageTittle {
+  position: absolute;
+   left: 65px;
+
+
+
+
+}
+
+@media screen and (max-width: 600px) {
+  #pageTittle {
+
+  }
+
+  .mainContent{
+
+    margin-top: 30px;
+
+
+  }
+}
+

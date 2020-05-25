@@ -1,0 +1,57 @@
+#orderPreview{
+  position: relative;
+  width: 50%;
+  border: 3px solid black;
+  height: 320px;
+}
+
+h1{
+  background-color: black;
+}
+
+#orderPreviewText{
+  margin: 10px;
+
+
+}
+p{
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+#OrderIcon{
+  position: absolute;
+
+ /* right: 0;
+  bottom: 0;
+  */
+  bottom: -144px;
+  right: 10px;
+}
+
+button{
+ position: absolute;
+  height: 100px;
+  width: 100px;
+
+  margin-left: 10px;
+  margin-bottom: 10px;
+
+}
+
+#AddToCart{
+  position: absolute;
+  bottom: -40px;
+}
+
+@media screen and (max-width: 600px)
+{
+  #orderPreview{
+    position: relative;
+    width: 100%;
+    border: 3px solid black;
+    height: 270px;
+    margin-left: -6px;
+  }
+
+}

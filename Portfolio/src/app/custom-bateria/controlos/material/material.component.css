@@ -1,0 +1,43 @@
+input {
+  height: 60px;
+  width: 60px;
+  border: 0;
+}
+
+.ButtonZone{
+
+  display: table;
+  width: 100%;
+
+
+}
+
+.column {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  float: left;
+  width: 15%;
+  padding: 5px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  input{
+    height: 30px;
+    width: 30px;
+
+
+  }
+  .column {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    float: left;
+    width: 21%;
+    padding: 5px;
+    text-align: center;
+  }
+
+}
+
+
+

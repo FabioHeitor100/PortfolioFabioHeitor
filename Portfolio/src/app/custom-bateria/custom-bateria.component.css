@@ -1,0 +1,100 @@
+
+mat-grid-list{
+  position: relative;
+  width:100%;
+
+}
+
+
+
+
+mat-grid-tile{
+  background-color: darkgrey;
+}
+
+
+
+
+#customZoneGrid{
+  width: 1000px;
+}
+
+mat-tab-group{
+
+
+
+}
+
+mat-tab{
+
+}
+
+
+
+
+
+
+
+
+
+.mainContent{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+}
+
+#imageZone{
+
+  display:inline-block;
+  width: 50%;
+  height: 500px;
+
+
+}
+#customZone1{
+
+  border: black 3px solid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+
+}
+
+#orderZone{
+  position: absolute;
+  display:inline-block;
+
+  width: 50%;
+  height: 50px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .mainContent{
+    display: block;
+
+  }
+
+  #imageZone{
+    display: block;
+    width: 100%;
+    height: 363px;
+
+  }
+  #customZone1{
+    display: block;
+    width: 100%;
+    margin-left: -6px;
+  }
+  #orderZone{
+    margin-top: 245px;
+    width: 100%;
+  }
+}
+
+
+
